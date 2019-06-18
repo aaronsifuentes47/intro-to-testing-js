@@ -12,7 +12,10 @@ function add(num1, num2) {
 }
 
 function sayHello(username) {
-    return "Hello, " + username + "!";
-
+    if (typeof username==="boolean" || username ===undefined || username===null) {
+        return "Hello, World!";
+    } else {
+        return "Hello, " + username + "!";
+    }
 }
 
