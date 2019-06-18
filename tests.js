@@ -13,3 +13,35 @@ describe('helloWorld', function() {
       expect(helloWorld()).not.toBe(undefined);
     });
 });
+
+
+describe("add", function() {
+    it('should be a defined function', function () {
+        expect(typeof add).toBe('function');
+    });
+    it("should return 5 when adding 3 and 2.", function(){
+        expect(add(3,2)).toBe(5);
+    });
+    it("should return false when adding two strings", function(){
+        expect(add("black","bird")).toBe(false);
+    })
+});
+
+
+describe("sayHello", function(){
+    it("should be a defined function", function() {
+        expect(typeof sayHello).toBe("function");
+    });
+    it("should pull in a username as a string", function(){
+        expect(typeof sayHello()).toBe("string")
+    });
+    it("should  a string of 'Hello, Jane!'", function(){
+        expect (sayHello("Jane")).toBe("Hello, Jane!")
+    });
+    it("should return a string of 'Hello, Alex!'", function(){
+        expect (sayHello("Alex")).toBe("Hello, Alex!")
+    });
+    it("should return a string of 'Hello, Pat!'", function(){
+        expect (sayHello("Pat")).toBe("Hello, Pat!")
+    });
+});
